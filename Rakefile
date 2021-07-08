@@ -4,4 +4,9 @@
 require File.expand_path('../config/application', __FILE__)
 require "sinatra/activerecord/rake"
 
+desc 'drop into the Pry console'
+task :console => :environment do
+    Pry.start
+end
+
 Rails.application.load_tasks
